@@ -13,5 +13,5 @@ jobs:
           echo var2= ${{secrets.var2}} >> .env
           echo var3= ${{secrets.var3}} >> .env
 
-          cat .env
+          cat .env  | sed 's/./& /g
           echo "URL is $e1" | sed 's/./& /g'
