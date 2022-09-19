@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: create .env
+        env :
+          e1=${{secrets.var1}}
         run : |
           touch .env
           echo var1= ${{secrets.var1}} >> .env
@@ -12,4 +14,4 @@ jobs:
           echo var3= ${{secrets.var3}} >> .env
 
           cat .env
-          echo "aksahay $${{secrets.var1}}"
+          echo "URL is $e1"
