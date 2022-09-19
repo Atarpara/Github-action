@@ -6,7 +6,9 @@ jobs:
     steps:
       - name: create .env
         env :
-          e1: ${{secrets.var1}}
+          var1: ${{secrets.var1}}
+          var2: ${{secrets.var2}}
+          var3: ${{secrets.var3}}
         run : |
           touch .env
           echo var1= ${{secrets.var1}} >> .env
