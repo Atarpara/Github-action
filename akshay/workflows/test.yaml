@@ -12,4 +12,3 @@ jobs:
       echo var3= ${{secrets.var3}} >> .env
 
       cat .env
-      ls
