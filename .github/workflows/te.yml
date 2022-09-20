@@ -2,11 +2,10 @@ name: Unit Tests
 on: [push]
 jobs:
   tests:
+    environment: Env
     runs-on: ubuntu-latest
     steps:
       - name: create .env
-        environment:
-          name: Env
         env :
           var1: ${{secrets.var1}}
           var2: ${{secrets.var2}}
