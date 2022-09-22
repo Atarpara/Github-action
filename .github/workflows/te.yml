@@ -1,5 +1,5 @@
 name: Unit Tests
-on: [pull request]
+on: [ pull_request ]
 jobs:
   tests:
     environment: Env
